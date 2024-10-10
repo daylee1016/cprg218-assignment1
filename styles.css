@@ -1,26 +1,29 @@
 *{
     box-sizing: border-box;
     font-family: sans-serif;
+    margin: 0;
 }
 .header-container{
     display: flex;
     background-color: #120323;
     color: #97bf04;
-    padding: 40px;
+    padding: 50px;
     justify-content: center;
     text-align: center;
     height: 20vh;
+    align-items: center;
 }
 
 .header-container img {
    margin-right: 10px;
    max-width: 300px;
+   height: 15vh;
 }
 #container{
     display: flex;
     flex-direction: row;
-    padding-bottom: 50px;
-    margin-inline-end: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 #container p{
@@ -30,21 +33,24 @@
     width: 1000spx;
 }
 
-#puffin{
+#container img{
     border: 5px #d9043d solid;
     max-width: 320px;
     float: left;
     margin-right: 20px;
+    margin-left: 20px;
 }
 
 aside{
     background-color: #97bf04;
     padding: 10px;
+    padding-bottom: 30px;
     width:350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-wrap: break-word;
+    margin-block-start: 10px;
 }
 
 aside p{
@@ -64,11 +70,14 @@ footer{
 
 /*Responsive Sheet*/
 @media screen/*type*/ and (max-width:1000px){
-    #puffin{
+    #container img{
         max-width: 300px;
     }
     #container{
         flex-direction: column;
+    }
+    #container p{
+        margin-right: 20px;
     }
     aside{
         width: 100%;
@@ -84,18 +93,30 @@ footer{
     .header-container{
         flex-direction: column;
         align-items: center;
-        padding-top: 10%;
+        padding-top: 5%;
     }
     .header-container img{
         max-width: 80px;
     }
     #container{
         flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
     }
-    #puffin{
-        display:blcok;
-        max-width: 100%;
-        margin-bottom: 3%;
+    #container img{
+        display: block;
+        width: 100%;
+        max-width: 550px;
+        margin: 10px auto 20px;
+        float: none;
+    }
+    #container p{
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    figcaption{
+        margin: 20px;
     }
     aside{
         margin-top: 3%;
